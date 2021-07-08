@@ -51,7 +51,7 @@ export default function GatewayDetailSubscribers(props: GatewayDetailType) {
   const subscriberRows: Array<SubscriberRowType> = gwSubscriberMap.map(
     (serialNum: string) => {
       // $FlowIgnore
-      const subscriberInfo = subscriberState.state?.[serialNum];
+      const subscriberInfo = subscriberState.sessionState?.[serialNum];
       return {
         name: subscriberInfo?.name || serialNum,
         id: serialNum,
